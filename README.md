@@ -52,3 +52,4 @@ If you desist of your goal, release it by a PR so other fellow can try it.
 | 758803 | [Daniel González](https://github.com/Uncastellum) | [Uncastellum/lab5-soa](https://github.com/Uncastellum/lab5-soa/tree/test) |    |    | 
 | 760739 | [Alberto Calvo](https://github.com/AlbertoCalvoRubio) | [AlbertoCalvoRubio/lab5-soa](https://github.com/AlbertoCalvoRubio/lab5-soa/tree/test) |[Use Camel for providing a REST endpoint for queries](https://camel.apache.org/components/latest/rest-component.html)   |    | 
 | 761319 | [Markles01](https://github.com/Markles01) |[lab5-soa](https://github.com/Markles01/lab5-soa/tree/test)     |        | 
+| 757715 | [Hayk Kocharyan](https://github.com/hayk99) |  [hayk99/lab5-soa](https://github.com/hayk99/lab5-soa/tree/test)    |             |        | 

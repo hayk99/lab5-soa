@@ -13,7 +13,25 @@ public class Router extends RouteBuilder {
     from(DIRECT_URI)
       .log("Body contains \"${body}\"")
       .log("Searching twitter for \"${body}\"!")
-      .toD("twitter-search:${body}")
+      .process(exchange -> {
+        //NewBody without max
+        String newBody = "";
+        //get the body
+        String body = exchange.getIn().getBody(String.class);
+        //set default tweets size to 5
+        int maxNum = 5;
+        for (String splited : body.split(" ")){
+          if (splited.matches("max:[0-9]+")){
+            maxNum = Integer.parseInt(splited.split(":")[1]);
+          }
+          else{
+            newBody += splited + " ";
+          }
+        }
+        exchange.getIn().setBody(newBody);
+        exchange.getIn().setHeader("count", maxNum);
+      })
+      .toD("twitter-search:${body}?count=${header.count}")
       .log("Body now contains the response from twitter:\n${body}");
   }
 }
